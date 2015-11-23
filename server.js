@@ -7,11 +7,17 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.use(express.static(__dirname + '/html'));
+
 var port = process.env.PORT || 3000;
 
 app.get('/', function(req, res) {
-	res.send(req.get('host'));
+	res.render('index');
 });
+
+app.get('/api' function(req, res) {
+	res.send(req.get('host'));
+})
 
 app.listen(port, function() {
 	console.log('Our app is running on port: ' + port);
