@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
-app.get('/api' function(req, res) {
+app.get('/api', function(req, res) {
 	res.send(req.get('host'));
 })
 
