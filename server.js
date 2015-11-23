@@ -10,7 +10,7 @@ app.use(function(req, res, next) {
 var port = process.env.PORT || 3000;
 
 app.get('/', function(req, res) {
-	res.send("hello there...");
+	res.send(req.url);
 });
 
 app.listen(port, function() {
