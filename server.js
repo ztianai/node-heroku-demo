@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 var port = process.env.PORT || 3000;
 
 app.get('/', function(req, res) {
-	res.render('index');
+	res.render('pages/index');
 });
 
 app.get('/api', function(req, res) {
