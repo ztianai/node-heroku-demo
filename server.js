@@ -9,8 +9,12 @@ app.set('view engine', 'ejs');
 var port = process.env.PORT || 3000;
 
 app.get('/', function(request, response) {
-	console.log(request);
+	response.render('pages/index');
 });
+
+app.get('/api/', function(req, res) {
+	res.send(req.get('host'));
+})
 
 app.listen(port, function() {
 	console.log('Our app is running on port: ' + port);
