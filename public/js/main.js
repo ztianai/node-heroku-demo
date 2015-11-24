@@ -5,5 +5,6 @@ angular.module('my-app', [])
 	$http.get('https://node-heroku-demo-1234.herokuapp.com/api/')
 		.then(function(response) {
 			console.log(response);
+			$scope.server = response.data;
 		})
 }])
